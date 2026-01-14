@@ -1,0 +1,28 @@
+
+PLAY [Lab4 - install nginx and deploy index page] ******************************
+
+TASK [Install nginx] ***********************************************************
+ok: [10.0.2.16]
+
+TASK [Copy index.html to nginx web root] ***************************************
+--- before
++++ after: /home/student/DevOpsLab4/src/files/index.html
+@@ -0,0 +1,9 @@
++<!doctype html>
++<html>
++  <head><meta charset="utf-8"><title>Lab4</title></head>
++  <body>
++    <h1>DevOps Lab 4: Ansible deploy</h1>
++    <p>Host: VM2 (10.0.2.16)</p>
++  </body>
++</html>
++
+
+changed: [10.0.2.16]
+
+TASK [Ensure nginx started and enabled] ****************************************
+ok: [10.0.2.16]
+
+PLAY RECAP *********************************************************************
+10.0.2.16                  : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

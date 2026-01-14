@@ -1,0 +1,31 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 10.0.2.16:80...
+* Connected to 10.0.2.16 (10.0.2.16) port 80
+> GET / HTTP/1.1
+> Host: 10.0.2.16
+> User-Agent: curl/8.5.0
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+< Server: nginx/1.24.0 (Ubuntu)
+< Date: Wed, 14 Jan 2026 21:01:20 GMT
+< Content-Type: text/html
+< Content-Length: 183
+< Last-Modified: Wed, 14 Jan 2026 21:01:18 GMT
+< Connection: keep-alive
+< ETag: "6968041e-b7"
+< Accept-Ranges: bytes
+< 
+{ [183 bytes data]
+100   183  100   183    0     0  27309      0 --:--:-- --:--:-- --:--:-- 30500
+* Connection #0 to host 10.0.2.16 left intact
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>Lab4</title></head>
+  <body>
+    <h1>DevOps Lab 4: Ansible deploy</h1>
+    <p>Host: VM2 (10.0.2.16)</p>
+  </body>
+</html>
+

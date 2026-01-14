@@ -1,0 +1,26 @@
+---
+- name: Lab4 - install nginx and deploy index page
+  hosts: web
+  remote_user: runner
+  become: true
+  gather_facts: false
+
+  tasks:
+    - name: Install nginx
+      ansible.builtin.apt:
+        name: nginx
+        update_cache: yes
+
+    - name: Copy index.html to nginx web root
+      ansible.builtin.copy:
+        src: files/index.html
+        dest: /var/www/html/index.html
+        owner: www-data
+        group: www-data
+        mode: "0644"
+
+    - name: Ensure nginx started and enabled
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
